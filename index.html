@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Misaki Language Center</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: #111;
+      padding: 15px;
+    }
+
+    header nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    header nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    header nav ul li a:hover {
+      color: #ff4b5c;
+    }
+
+    .home-container {
+      margin-top: 50px;
+    }
+
+    .home-container img {
+      width: 60%;
+      border-radius: 20px;
+      filter: grayscale(100%);
+      transition: all 0.6s ease;
+      animation: bounce 3s infinite ease-in-out;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+
+    .home-container img:hover {
+      filter: grayscale(0%);
+      transform: scale(1.05);
+    }
+
+    h1 {
+      margin-top: 25px;
+      font-size: 2.2em;
+      color: #222;
+    }
+
+    p {
+      margin-top: 10px;
+      font-size: 1.1em;
+      color: #555;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* Sparkles */
+    .sparkle {
+      position: fixed;
+      top: -10px;
+      width: 5px;
+      height: 5px;
+      background: gold;
+      border-radius: 50%;
+      animation: fall linear forwards;
+      pointer-events: none;
+      opacity: 0.8;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="teachers.html">Teachers</a></li>
+        <li><a href="students.html">Students</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="home-container">
+    <img src="https://poggers.com/cdn/shop/articles/1d88a4ee2321253e09bf1b8575072d5a_1822x1025_crop_center.webp?v=1709725904" alt="Misaki Center">
+    <h1>Our Language Center Misaki</h1>
+    <p>
+      A place where learning meets passion. We provide high-quality language education, inspiring students to achieve their goals and connect with the world.
+    </p>
+  </div>
+
+  <script>
+    function createSparkle() {
+      const sparkle = document.createElement("div");
+      sparkle.className = "sparkle";
+      sparkle.style.left = Math.random() * 100 + "vw"; 
+      sparkle.style.animationDuration = (2 + Math.random() * 3) + "s"; 
+      document.body.appendChild(sparkle);
+
+      setTimeout(() => sparkle.remove(), 5000);
+    }
+
+    setInterval(createSparkle, 300);
+  </script>
+</body>
+</html>

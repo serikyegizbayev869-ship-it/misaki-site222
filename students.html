@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Students</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: white;
+      color: #333;
+      text-align: center;
+      padding: 30px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 40px;
+    }
+
+    /* Grid for students */
+    .students-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      justify-items: center;
+      margin: 0 auto;
+      max-width: 900px;
+    }
+
+    .student {
+      animation: bounce 4s ease-in-out infinite;
+    }
+
+    .student img {
+      width: 250px;
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .student img:hover {
+      transform: scale(1.05);
+    }
+
+    .student-name {
+      margin-top: 10px;
+      font-size: 1.3em;
+      font-weight: bold;
+    }
+
+    /* Bounce animation */
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+
+    /* Nav styles */
+    nav {
+      background:#333;
+      padding: 15px;
+      text-align:center;
+    }
+    nav a {
+      color:white;
+      margin:0 15px;
+      text-decoration:none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="teachers.html">Teachers</a>
+    <a href="students.html">Students</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <h1>Our Best Students (Hashiras)</h1>
+
+  <div class="students-grid">
+    <div class="student">
+      <img src="https://i.pinimg.com/736x/1c/d4/dc/1cd4dc23b0863248807e3d9b69de1f01.jpg" alt="Tanjiro Kamado">
+      <div class="student-name">Tanjiro Kamado</div>
+    </div>
+
+    <div class="student">
+      <img src="https://i.pinimg.com/736x/28/85/36/28853647205684eaa9cb634b0e2785fa.jpg" alt="Zenitsu Agatsuma">
+      <div class="student-name">Zenitsu Agatsuma</div>
+    </div>
+
+    <div class="student">
+      <img src="https://preview.redd.it/inosuke-is-the-best-demon-slayer-character-prove-me-wrong-v0-9bja3g7f5wcc1.jpeg?auto=webp&s=17356082c03d654316725bba090eb36272297d4b" alt="Inosuke Hashibira">
+      <div class="student-name">Inosuke Hashibira</div>
+    </div>
+
+    <div class="student">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ19cvAmFbTSKjzkWnMGTGF3HiQDReEcdqJg&s" alt="Mitsuri Kanroji">
+      <div class="student-name">Mitsuri Kanroji</div>
+    </div>
+  </div>
+</body>
+</html>

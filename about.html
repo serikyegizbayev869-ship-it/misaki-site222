@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: white;
+      color: #333;
+      text-align: center;
+      padding: 30px;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.3em;
+      line-height: 1.6;
+      margin: 15px auto;
+      max-width: 700px;
+    }
+
+    .why-choose-us {
+      margin-top: 40px;
+    }
+
+    .why-choose-us h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .why-choose-us ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .why-choose-us li {
+      font-size: 1.2em;
+      margin: 12px 0;
+    }
+
+    /* Muichiro image */
+    .character {
+      margin: 40px auto;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .character img {
+      width: 300px;
+      border-radius: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .character img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Floating animation */
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+  </style>
+</head>
+<body>
+<!-- Navigation menu -->
+  <nav style="background:#333; padding: 15px; text-align:center;">
+    <a href="index.html" style="color:white; margin:0 15px; text-decoration:none;">Home</a>
+    <a href="about.html" style="color:white; margin:0 15px; text-decoration:none;">About</a>
+    <a href="teachers.html" style="color:white; margin:0 15px; text-decoration:none;">Teachers</a>
+    <a href="students.html" style="color:white; margin:0 15px; text-decoration:none;">Students</a>
+    <a href="contact.html" style="color:white; margin:0 15px; text-decoration:none;">Contact</a>
+  </nav>
+  <h1>Who We Are</h1>
+  <p>
+    We are a passionate team dedicated to inspiring others, sharing beauty, and creating comfort for everyone.
+  </p>
+
+  <div class="character">
+    <img src="https://sm.ign.com/t/ign_in/video/d/demon-slay/demon-slayer-kimetsu-no-yaiba-the-hinokami-chronicles-2-offi_zy8h.1280.png" alt="Muichiro Tokito">
+  </div>
+
+  <div class="why-choose-us">
+    <h2>Why Choose Us?</h2>
+    <ul>
+      <li>✨ Unique style and atmosphere</li>
+      <li>🤝 We truly care about every client</li>
+      <li>⚡ Fast and high-quality service</li>
+      <li>🌸 Inspiration in every detail</li>
+    </ul>
+  </div>
+  <script>
+    function createSparkle() {
+      const sparkle = document.createElement("div");
+      sparkle.className = "sparkle";
+      sparkle.style.left = Math.random() * 100 + "vw"; 
+      sparkle.style.animationDuration = (2 + Math.random() * 3) + "s"; 
+      document.body.appendChild(sparkle);
+
+      setTimeout(() => sparkle.remove(), 5000);
+    }
+
+    setInterval(createSparkle, 300);
+  </script>
+</body>
+</html>
